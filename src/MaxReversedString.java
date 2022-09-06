@@ -1,0 +1,56 @@
+import java.util.Stack;
+
+public class MaxReversedString {
+    public static void main(String[] args) {
+        MaxReversedString max = new MaxReversedString();
+        //System.out.println(max.reversedString("(u(love)i)"));
+        System.out.println(max.reversedString("(ed(et(oc))el)"));
+        //System.out.println(max.reversedString("(abcd)"));
+    }
+
+    private String reversedString(String s) {
+        Stack<String> stack = new Stack<>();
+
+        int j = 0;
+        while(j < s.length()){
+            /*
+                We need to keep on adding whatever comes
+                as long as it is not a ')'.
+            */
+            if(s.charAt(j) != ')')
+                stack.push(s.charAt(j)+"");
+
+            /*
+                Now that we have encountered an ')', its time
+                to start popping from top of stack unless we find an opening
+                parenthesis
+
+                then we just need to reverse the string formed by popping
+                and put it back on stack.
+
+                Try dry running and it will all make sense
+            */
+            else{
+                StringBuilder sb = new StringBuilder();
+                while(!stack.isEmpty() && !stack.peek().equals("(")){
+                    sb.append(stack.pop());
+                }
+
+                stack.pop();
+                stack.push(sb.reverse().toString());
+            }
+            j++;
+        }
+
+        /*
+            We have our result string in the stack now,
+            we just need to pop it and return the reverse of it.
+        */
+        StringBuilder res = new StringBuilder();
+        while(!stack.isEmpty())
+            res.append(stack.pop());
+
+        return res.reverse().toString();
+
+    }
+}
