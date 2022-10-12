@@ -51,13 +51,16 @@ public class Main {
         List<String> str1 = Arrays.asList("abcd","aabc", "bd");//splitWords(scanner.nextLine());
         List<String> str2 = Arrays.asList("aaa", "aa");//splitWords(scanner.nextLine());
         //scanner.close();
-        System.out.println(str1);
-        System.out.println(str2);
-        List<Integer> res = compareStrings(str1, str2);
+        //System.out.println(str1);
+        //System.out.println(str2);
+       // List<Integer> res = compareStrings(str1, str2);
         //System.out.println(res.stream().map(String::valueOf).collect(Collectors.joining(" ")));
         Integer[] a = new Integer[]{1,3,400, 500};
         Integer[] b = new Integer[]{2,4};
-        System.out.println(mergeArray(a,b));
+        //System.out.println(mergeArray(a,b));
+        //Arrays.stream(getSortedOneArray(new int[]{1, 3, 5}, new int[]{2, 4})).forEach(x -> System.out.print(x +" "));
+        //Arrays.stream(getSortedOneArray(new int[]{1,5,700}, new int[]{200, 400})).forEach(x -> System.out.print(x +" "));
+        Arrays.stream(getSortedOneArray(new int[]{1,500,700}, new int[]{200, 400})).forEach(x -> System.out.print(x +" "));
 
     }
 
@@ -91,4 +94,31 @@ public class Main {
 
         return result;
     }
+
+    public static int[] getSortedOneArray(int[] arr1, int[] arr2) {
+        int sumOfSizeOfArrays = arr1.length + arr2.length;
+        int[] addedArrays = new int[sumOfSizeOfArrays];
+
+        for (int i=0; i<arr1.length; i++) {
+            addedArrays[i]=arr1[i];
+        }
+
+        for (int i=sumOfSizeOfArrays-arr2.length; i<sumOfSizeOfArrays; i++) {
+           // System.out.println(i);
+           // System.out.println(i-arr2.length-1);
+            addedArrays[i]=arr2[i-arr2.length-1];
+        }
+
+
+        for (int i=0; i<sumOfSizeOfArrays-1; i++) {
+            if (addedArrays[i] > addedArrays[i+1]) {
+                int tempVal = addedArrays[i];
+                addedArrays[i]=addedArrays[i+1];
+                addedArrays[i+1]=tempVal;
+            }
+        }
+
+        return addedArrays;
+    }
+
 }
