@@ -1,7 +1,7 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+
+
+import java.time.Instant;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -48,19 +48,55 @@ public class Main {
 
     public static void main(String[] args) {
        // Scanner scanner = new Scanner(System.in);
-        List<String> str1 = Arrays.asList("abcd","aabc", "bd");//splitWords(scanner.nextLine());
-        List<String> str2 = Arrays.asList("aaa", "aa");//splitWords(scanner.nextLine());
+       // List<String> str1 = Arrays.asList("abcd","aabc", "bd");//splitWords(scanner.nextLine());
+        //List<String> str2 = Arrays.asList("aaa", "aa");//splitWords(scanner.nextLine());
         //scanner.close();
         //System.out.println(str1);
         //System.out.println(str2);
        // List<Integer> res = compareStrings(str1, str2);
         //System.out.println(res.stream().map(String::valueOf).collect(Collectors.joining(" ")));
-        Integer[] a = new Integer[]{1,3,400, 500};
-        Integer[] b = new Integer[]{2,4};
+       // Integer[] a = new Integer[]{1,3,400, 500};
+        //Integer[] b = new Integer[]{2,4};
         //System.out.println(mergeArray(a,b));
         //Arrays.stream(getSortedOneArray(new int[]{1, 3, 5}, new int[]{2, 4})).forEach(x -> System.out.print(x +" "));
         //Arrays.stream(getSortedOneArray(new int[]{1,5,700}, new int[]{200, 400})).forEach(x -> System.out.print(x +" "));
-        Arrays.stream(getSortedOneArray(new int[]{1,500,700}, new int[]{200, 400})).forEach(x -> System.out.print(x +" "));
+        //Arrays.stream(getSortedOneArray(new int[]{1,500,700}, new int[]{200, 400})).forEach(x -> System.out.print(x +" "));
+        String[] arr= {"8.2.1_JAVA_TI_Feedback-Pozdnyakov Anatoliy Sergeevich.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Akhil Reddy Narayana.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Alper Mulayim.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Amandeep Singh Dillon.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Ankita Burungale.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Braiam Soto Florez.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Chukelu Chioma.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Denisa Popan.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Ekaterina Veremchuk.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Lindemann Aleksandr Olegovich.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Luiz Barros.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Mirko Krajcer.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Octavian Matu.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Oluwaseun Joseph Olotu.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Oriol de Reina Gálvez.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Samrah Abbas.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Sulzycki Michal.xlsx",
+                "8.2.1_JAVA_TI_Feedback-Tinashe Makaza.xlsx",
+                "8.3.1_JAVA_TI_Feedback-Aatishkumar Jayeshkumar Shah.xlsx",
+                "8.3.1_JAVA_TI_Feedback-Abdullahi Gbadamosi .xlsx",
+                "8.3.1_JAVA_TI_Feedback-Dascalu Andrei.xlsx",
+                "8.3.1_JAVA_TI_Feedback-Guillem Vila Corominas.xlsx",
+                "8.3.1_JAVA_TI_Feedback-Iván Dapena Morillo.xlsx",
+                "8.3.1_JAVA_TI_Feedback-Naga Nitin Reddy Palleti.xlsx",
+                "8.3.1_JAVA_TI_Feedback-Okechukwu Onwuchekwa.xlsx",
+                "8.3.1_JAVA_TI_Feedback-Oleksandr Minaiev.xlsx",
+                "8.3.1_JAVA_TI_Feedback-Olga Konstantinov.xlsx",
+                "8.3.1_JAVA_TI_Feedback-Rakesh Madad.xlsx",
+                "8.3.1_JAVA_TI_Feedback-Savankumar Hokarnekar.xlsx"
+        };
+        for(String n: arr){
+            String s = n.split("-")[1];
+            System.out.println(s.substring(0, s.indexOf(".")));
+        }
+       // printWithWrapper();
+       // printWithPrimitive();
 
     }
 
@@ -121,4 +157,22 @@ public class Main {
         return addedArrays;
     }
 
+    private static void printWithWrapper(){
+        Long sum = 0L;
+        long startTime = Instant.now().getEpochSecond();
+        for(int i =0; i< Integer.MAX_VALUE; i++)
+            sum += i;
+        long endTime = Instant.now().getEpochSecond();
+        System.out.println("time took:"+(endTime-startTime));
+    }
+    private static void printWithPrimitive(){
+        long sum = 0l;
+        long startTime = Instant.now().getEpochSecond();
+        for(int i =0; i< Integer.MAX_VALUE; i++)
+            sum += i;
+        long endTime = Instant.now().getEpochSecond();
+        Comparator<Integer> naturalOrder =
+                (i, j) -> (i < j) ? -1 : (i == j ? 0 : 1);
+        System.out.println("time took:"+(endTime-startTime));
+    }
 }
