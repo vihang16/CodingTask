@@ -1,4 +1,4 @@
-package com.karat.library.securedRoom;
+package com.karat.securedRoom;
 
 import java.util.*;
 

@@ -1,9 +1,7 @@
 //https://central.karat.io/questions/536/guide#1-1
-package com.karat.library;
+package com.karat.tombRaider;
 
-import java.lang.reflect.MalformedParameterizedTypeException;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 public class SpherePuzzle {

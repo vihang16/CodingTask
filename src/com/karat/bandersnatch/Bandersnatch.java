@@ -1,4 +1,5 @@
-package com.karat.library.bandersnatch;
+//https://central.karat.io/questions/739/guide#3-1
+package com.karat.bandersnatch;
 
 import java.util.*;
 import java.util.stream.Collectors;

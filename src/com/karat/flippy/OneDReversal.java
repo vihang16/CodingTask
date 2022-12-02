@@ -1,4 +1,4 @@
-package com.karat.library.flippy;
+package com.karat.flippy;
 
 public class OneDReversal {
     public static void main(String[] args) {

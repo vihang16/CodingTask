@@ -1,4 +1,4 @@
-package com.karat.library.flippy;
+package com.karat.flippy;
 
 import java.util.ArrayList;
 import java.util.Arrays;

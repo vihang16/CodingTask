@@ -1,4 +1,4 @@
-package com.karat.library.studentAffair;
+package com.karat.studentAffair;
 
 import java.util.*;
 
