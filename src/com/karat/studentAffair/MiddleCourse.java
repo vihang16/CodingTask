@@ -50,9 +50,9 @@ public class MiddleCourse {
                 List<String> courseList = new ArrayList<>();
                 //courseSet.add(c);
                 dfs(c, courseMap, courseList, allRootToCourseMaMap, course);
-                List<List<String>> courses = allRootToCourseMaMap.getOrDefault(course, new ArrayList<>());
-                courses.add(courseList);
-                allRootToCourseMaMap.put(course, courses);
+//                List<List<String>> courses = allRootToCourseMaMap.getOrDefault(course, new ArrayList<>());
+//                courses.add(courseList);
+//                allRootToCourseMaMap.put(course, courses);
             }
         }
        // System.out.println(allRootToCourseMaMap.get("Creative Writing"));
