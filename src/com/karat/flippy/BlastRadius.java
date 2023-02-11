@@ -51,7 +51,7 @@ public class BlastRadius {
             int col = space[1];
             findAdjacentEffectiveCells(row, col, new ArrayList<>(), radius);
         }
-
+       return null;
     }
     private static void findAdjacentEffectiveCells(int row, int col, List<Integer[]> allNearByCells, int radius){
 
