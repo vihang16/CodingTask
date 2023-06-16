@@ -88,14 +88,12 @@ public class ForestPath {
             if(sequenceIndex[0] == sequence.length - 1 && pathList.size() < existingSize.size() ){
                 pathList = new ArrayList<>(existingSize);
                 //System.out.println("existing size:"+existingSize.size());
-
             }
             return;
         }
         if(sequenceIndex[0] == sequence.length - 1 && !forests[row][col].equals(sequence[sequence.length - 1]) && pathList.size() < existingSize.size() ){
                 pathList = new ArrayList<>(existingSize);
                 //System.out.println("existing size:"+existingSize.size());
-
                 return;
         }
         if(sequenceIndex[0]+1 < sequence.length && forests[row][col].equals(sequence[sequenceIndex[0]+1])){

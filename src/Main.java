@@ -61,44 +61,14 @@ public class Main {
         //Arrays.stream(getSortedOneArray(new int[]{1, 3, 5}, new int[]{2, 4})).forEach(x -> System.out.print(x +" "));
         //Arrays.stream(getSortedOneArray(new int[]{1,5,700}, new int[]{200, 400})).forEach(x -> System.out.print(x +" "));
         //Arrays.stream(getSortedOneArray(new int[]{1,500,700}, new int[]{200, 400})).forEach(x -> System.out.print(x +" "));
-        String[] arr= {"8.2.1_JAVA_TI_Feedback-Pozdnyakov Anatoliy Sergeevich.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Akhil Reddy Narayana.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Alper Mulayim.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Amandeep Singh Dillon.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Ankita Burungale.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Braiam Soto Florez.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Chukelu Chioma.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Denisa Popan.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Ekaterina Veremchuk.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Lindemann Aleksandr Olegovich.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Luiz Barros.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Mirko Krajcer.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Octavian Matu.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Oluwaseun Joseph Olotu.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Oriol de Reina Gálvez.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Samrah Abbas.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Sulzycki Michal.xlsx",
-                "8.2.1_JAVA_TI_Feedback-Tinashe Makaza.xlsx",
-                "8.3.1_JAVA_TI_Feedback-Aatishkumar Jayeshkumar Shah.xlsx",
-                "8.3.1_JAVA_TI_Feedback-Abdullahi Gbadamosi .xlsx",
-                "8.3.1_JAVA_TI_Feedback-Dascalu Andrei.xlsx",
-                "8.3.1_JAVA_TI_Feedback-Guillem Vila Corominas.xlsx",
-                "8.3.1_JAVA_TI_Feedback-Iván Dapena Morillo.xlsx",
-                "8.3.1_JAVA_TI_Feedback-Naga Nitin Reddy Palleti.xlsx",
-                "8.3.1_JAVA_TI_Feedback-Okechukwu Onwuchekwa.xlsx",
-                "8.3.1_JAVA_TI_Feedback-Oleksandr Minaiev.xlsx",
-                "8.3.1_JAVA_TI_Feedback-Olga Konstantinov.xlsx",
-                "8.3.1_JAVA_TI_Feedback-Rakesh Madad.xlsx",
-                "8.3.1_JAVA_TI_Feedback-Savankumar Hokarnekar.xlsx"
-        };
-        for(String n: arr){
-            String s = n.split("-")[1];
-            System.out.println(s.substring(0, s.indexOf(".")));
-        }
-       // printWithWrapper();
-       // printWithPrimitive();
+
+
+        Optional s = Optional.ofNullable(null);
+        System.out.println(s.isPresent());
+
 
     }
+
 
     public static List<Integer> mergeArray(Integer[] a, Integer[] b){
         ArrayList<Integer> aList = new ArrayList<>();

@@ -104,7 +104,7 @@ public class AncientGrudges {
         Map<String, List<String>> guestToFamilyName = Arrays
                 .stream(guests)
                 .collect(groupingBy(e-> e[1],
-                        mapping(e -> e[0], toList()));
+                        mapping(e -> e[0], toList())));
 
         for(String[] enemy : enemies){
             enemiesMap.merge(enemy[0], new ArrayList<>(), (prev, newO) -> prev).add(enemy[1]);
